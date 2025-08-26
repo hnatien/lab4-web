@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function MainPage({ onSelectExercises, onSelectHomework }) {
+function MainPage() {
   return (
     <div style={{
       display: 'flex',
@@ -25,35 +26,48 @@ function MainPage({ onSelectExercises, onSelectHomework }) {
         flexDirection: 'column',
         width: '300px'
       }}>
-        <button
-          onClick={onSelectExercises}
-          style={{
-            backgroundColor: 'white',
-            color: 'black',
-            border: '2px solid black',
-            padding: '20px',
-            fontSize: '18px',
-            cursor: 'pointer',
-            width: '100%'
-          }}
-        >
+        <Link to="/exercises" style={{
+          backgroundColor: 'white',
+          color: 'black',
+          border: '2px solid black',
+          padding: '20px',
+          fontSize: '18px',
+          cursor: 'pointer',
+          width: '100%',
+          textDecoration: 'none',
+          textAlign: 'center'
+        }}>
           Exercises 1-11
-        </button>
+        </Link>
         
-        <button
-          onClick={onSelectHomework}
-          style={{
-            backgroundColor: 'white',
-            color: 'black',
-            border: '2px solid black',
-            padding: '20px',
-            fontSize: '18px',
-            cursor: 'pointer',
-            width: '100%'
-          }}
-        >
+        <Link to="/homework" style={{
+          backgroundColor: 'white',
+          color: 'black',
+          border: '2px solid black',
+          padding: '20px',
+          fontSize: '18px',
+          cursor: 'pointer',
+          width: '100%',
+          textDecoration: 'none',
+          textAlign: 'center'
+        }}>
           Homework 1: E-commerce App
-        </button>
+        </Link>
+
+        <Link to="/" style={{
+          backgroundColor: '#007bff',
+          color: 'white',
+          border: '2px solid #007bff',
+          padding: '20px',
+          fontSize: '18px',
+          cursor: 'pointer',
+          width: '100%',
+          textDecoration: 'none',
+          textAlign: 'center',
+          fontWeight: 'bold'
+        }}>
+          Homework 3: Authentication System
+        </Link>
       </div>
       
       <div style={{

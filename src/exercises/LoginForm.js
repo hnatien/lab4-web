@@ -56,8 +56,9 @@ function LoginForm() {
       <h2>Login Form</h2>
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: '12px' }}>
-          <label>Email:</label>
+          <label htmlFor="email">Email:</label>
           <input
+            id="email"
             type="email"
             value={email}
             onChange={handleEmailChange}
@@ -72,8 +73,9 @@ function LoginForm() {
         </div>
 
         <div style={{ marginBottom: '12px' }}>
-          <label>Password:</label>
+          <label htmlFor="password">Password:</label>
           <input
+            id="password"
             type="password"
             value={password}
             onChange={handlePasswordChange}
